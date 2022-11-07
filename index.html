@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Coffee</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(91071975, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/91071975" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <script defer src="js/jquery-3.6.1.slim.min.js"></script>
+</head>
+<body>
+  <section class="coffee__container">
+
+    <div class="slogan">Твой персональный кофе</div>
+    <h2 class="title">Сорта недели со скидкой</h2>
+
+    <div class="items__list">
+
+      <article class="coffee__item grow">
+        <img class="coffee__image" src="img/caramel.png" alt="Кофе с ароматом карамели" width="236" height="256">
+        <div class="coffee__price">
+          <div class="actual__price">559 руб.</div>
+          <div class="invalid__price">590 руб.</div>
+        </div>
+        <h3 class="subtitle">Карамельный кофе</h3>
+        <p class="coffee__description">Нежный ароматный эспрессо с тонкими пикантными нотками ванили в послевкусии</p>
+        <a class="modal_btn" href="#modal">
+          <button class="btn btn__to__buy" data-product-name="Карамельный кофе" id="buy__caramel">Купить</button>
+        </a>
+      </article>
+
+      <article class="coffee__item grow">
+        <img class="coffee__image" src="img/decaffeinato.png" alt="Кофе без кофеина" width="236" height="256">
+        <div class="coffee__price">
+          <div class="actual__price">267 руб.</div>
+          <div class="invalid__price">300 руб.</div>
+        </div>
+        <h3 class="subtitle">Кофе без кофеина</h3>
+        <p class="coffee__description">Элегантный эспрессо, наполненный сладкими ароматами, подчеркнутый нотами какао</p>
+        <a class="modal_btn" href="#modal">
+          <button class="btn btn__to__buy" data-product-name="Кофе без кофеина" id="buy__decaffeinato">Купить</button>
+        </a>
+      </article>
+
+      <article class="coffee__item grow">
+        <img class="coffee__image" src="img/origin.png" alt="Кофе со вкусом Origin" width="236" height="256">
+        <div class="coffee__price">
+          <div class="actual__price">346 руб.</div>
+          <div class="invalid__price">349 руб.</div>
+        </div>
+        <h3 class="subtitle">Кофе Origin</h3>
+        <p class="coffee__description">Ноты цитрусового мармелада и обжаренного миндаля раскрываются в этом элегантном и ярком бленде</p>
+        <a class="modal_btn" href="#modal">
+          <button class="btn btn__to__buy" data-product-name="Кофе Origin" id="buy__origin">Купить</button>
+        </a>
+      </article>
+
+      <article class="coffee__item grow">
+        <img class="coffee__image" src="img/elegante.png" alt="Кофе Elegante" width="236" height="256">
+        <div class="coffee__price">
+          <div class="actual__price">327 руб.</div>
+          <div class="invalid__price">330 руб.</div>
+        </div>
+        <h3 class="subtitle">Кофе Elegante</h3>
+        <p class="coffee__description">Яркое сочетание насыщенного вкуса и бархатного послевкусия подарит изысканное удовольствие</p>
+        <a class="modal_btn" href="#modal">
+          <button class="btn btn__to__buy" data-product-name="Кофе Elegante" id="buy__elegante">Купить</button>
+        </a>
+      </article>
+
+    </div>
+
+    <div class="remodal invisible" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+      <div id="remodal_result_form"></div>
+      <button class="remodal__close" id="remodal__close" data-remodal-action="close" aria-label="Close"></button>
+      <form class="modal__form" id="form">
+        <h3 class="subtitle remodal__subtitle" id="modal1Title">Оставьте ваши контактные данные, и наш консультант свяжется с вами</h3>
+        <input id="name" class="put__name" type="text" name="f[name]" placeholder="Ваше имя" required>
+        <p class="validation-message" id="validation-message-name" ></p>
+        <input id="phone" class="put__phone" type="tel" name="f[phone]" placeholder="Номер телефона" required>
+        <p class="validation-message" id="validation-message-phone" ></p>
+        <input class="put__phone" type="text" name="f[product]" id="product-name" placeholder="Название товара" required>
+        <p class="validation-message" id="validation-message-product"></p>
+      </form>
+      <div class="flex__center">
+        <button class="btn btn__submit" type="button" id="my_form_send">Отправить</button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="js/remodal.min.js"></script>
+  <script defer src="js/script.js"></script>
+</body>
+</html>
